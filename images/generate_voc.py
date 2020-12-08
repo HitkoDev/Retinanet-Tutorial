@@ -65,10 +65,10 @@ def main():
 	</size>
 	<segmented>0</segmented>""".format(dest_file, dest_path, w, h)]
             for c in contours:
-                x1 = min([p[0][0] for p in c if p >= 0])
-                x2 = max([p[0][0] for p in c if p >= 0])
-                y1 = min([p[0][1] for p in c if p >= 0])
-                y2 = max([p[0][1] for p in c if p >= 0])
+                x1 = min([p[0][0] for p in c if p[0][0] >= 0]) + 1
+                x2 = max([p[0][0] for p in c if p[0][0] >= 0]) + 1
+                y1 = min([p[0][1] for p in c if p[0][1] >= 0]) + 1
+                y2 = max([p[0][1] for p in c if p[0][1] >= 0]) + 1
                 data.append("""	<object>
 		<name>ear</name>
 		<pose>Unspecified</pose>
