@@ -1,0 +1,10 @@
+cython
+keras-resnet
+h5py
+keras
+matplotlib
+numpy
+opencv-python
+pillow
+progressbar2
+tensorflow-gpu

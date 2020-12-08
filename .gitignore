@@ -1,0 +1,6 @@
+images/AWEForSegmentation/**/*.png
+images/AWE/
+.eggs
+TrainingOutput
+build
+__pycache__
