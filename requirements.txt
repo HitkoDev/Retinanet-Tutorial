@@ -1,6 +1,6 @@
 cython
 keras-resnet
-h5py
+h5py==2.10.0
 keras
 matplotlib
 numpy
