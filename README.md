@@ -1,3 +1,25 @@
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Retinanet-Tutorial
 This is a tutorial created for the sole purpose of helping you quickly and easily train an object detector for your own dataset. It is an improvement over my [previous tutorial](https://github.com/jaspereb/FasterRCNNTutorial) which used the now outdated FasterRCNN network and tensorflow. This tutorial makes use of keras, tensorflow and tensorboard. There is a video version of this tutorial available here: https://youtu.be/mr8Y_Nuxciw where I go through the entire training process, so consult that if you get stuck.
 

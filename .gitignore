@@ -4,3 +4,8 @@ images/AWE/
 TrainingOutput
 build
 __pycache__
+*.aux
+*.bbl
+*.blg
+*.log
+*.out

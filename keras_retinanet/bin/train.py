@@ -154,7 +154,6 @@ def create_callbacks(model, training_model, prediction_model, validation_generat
         tensorboard_callback = keras.callbacks.TensorBoard(
             log_dir                = args.tensorboard_dir,
             histogram_freq         = 0,
-            batch_size             = args.batch_size,
             write_graph            = True,
             write_grads            = False,
             write_images           = False,
@@ -451,9 +450,9 @@ def parse_args(args):
     parser.add_argument('--group-method',     help='Determines how images are grouped together', type=str, default='ratio', choices=['none', 'random', 'ratio'])
 
     # Fit generator arguments
-    parser.add_argument('--multiprocessing',  help='Use multiprocessing in fit_generator.', action='store_true')
+    parser.add_argument('--multiprocessing',  help='Use multiprocessing in fit.', action='store_true')
     parser.add_argument('--workers',          help='Number of generator workers.', type=int, default=1)
-    parser.add_argument('--max-queue-size',   help='Queue length for multiprocessing workers in fit_generator.', type=int, default=10)
+    parser.add_argument('--max-queue-size',   help='Queue length for multiprocessing workers in fit.', type=int, default=10)
 
     return check_args(parser.parse_args(args))
 
@@ -534,8 +533,8 @@ def main(args=None):
         validation_generator = None
 
     # start training
-    return training_model.fit_generator(
-        generator=train_generator,
+    return training_model.fit(
+        train_generator,
         steps_per_epoch=args.steps,
         epochs=args.epochs,
         verbose=1,
